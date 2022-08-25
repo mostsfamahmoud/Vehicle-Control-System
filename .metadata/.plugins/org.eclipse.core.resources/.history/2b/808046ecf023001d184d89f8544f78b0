@@ -1,0 +1,21 @@
+/*
+ ============================================================================
+ Name        : main.c
+ Author      : Mostafa Mahmoud Ali
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Main Function of Vehicle Control System Project
+ ============================================================================
+ */
+
+#include "Vehicle.h"
+
+int main(void) {
+
+	uint8_t choice;
+
+	stateMenu(&choice);
+
+
+	return EXIT_SUCCESS;
+}

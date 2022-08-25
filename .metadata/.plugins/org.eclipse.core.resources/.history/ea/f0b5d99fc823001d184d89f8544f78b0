@@ -1,0 +1,26 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 24, 2022
+ *      Author: mosta
+ */
+
+#include "Vehicle.h"
+
+int main(void) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return EXIT_SUCCESS;
+}

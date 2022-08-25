@@ -1,0 +1,524 @@
+20:12:15 **** Rebuild of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+20:17:31 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'vehicleEngine_OFF':
+..\src\Vehicle.c:31:9: error: too few arguments to function 'stateMenu'
+   31 |         stateMenu();
+      |         ^~~~~~~~~
+..\src\Vehicle.c:14:6: note: declared here
+   14 | void stateMenu(uint8_t *state){
+      |      ^~~~~~~~~
+20:18:11 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+23:20:19 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setVehicleProperties':
+..\src\Vehicle.c:70:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint8_t *' {aka 'unsigned char *'} [-Wformat=]
+   70 |                 scanf("%d", &ptrVec->roomTemp);
+      |                        ~^   ~~~~~~~~~~~~~~~~~
+      |                         |   |
+      |                         |   uint8_t * {aka unsigned char *}
+      |                         int *
+      |                        %hhd
+..\src\Vehicle.c:76:25: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'uint16_t *' {aka 'short unsigned int *'} [-Wformat=]
+   76 |                 scanf("%d", &ptrVec->engineTemp);
+      |                        ~^   ~~~~~~~~~~~~~~~~~~~
+      |                         |   |
+      |                         |   uint16_t * {aka short unsigned int *}
+      |                         int *
+      |                        %hd
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:142:1: error: expected declaration or statement at end of input
+  142 | }
+      | ^
+At top level:
+..\src\Vehicle.c:133:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  133 | void displayVehicleInformation(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:120:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  120 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:110:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  110 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:101:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  101 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:22:21 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:142:1: error: expected declaration or statement at end of input
+  142 | }
+      | ^
+At top level:
+..\src\Vehicle.c:133:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  133 | void displayVehicleInformation(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:120:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  120 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:110:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  110 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:101:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  101 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:30:49 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'vehicleEngine_ON':
+..\src\Vehicle.c:40:25: warning: implicit declaration of function 'setVehicleProperties' [-Wimplicit-function-declaration]
+   40 |                         setVehicleProperties(choice, ptrVec);
+      |                         ^~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c: At top level:
+..\src\Vehicle.c:59:6: warning: conflicting types for 'setVehicleProperties'; have 'void(uint8_t,  Vehicle *)' {aka 'void(unsigned char,  Vehicle *)'}
+   59 | void setVehicleProperties(uint8_t choice, Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:40:25: note: previous implicit declaration of 'setVehicleProperties' with type 'void(uint8_t,  Vehicle *)' {aka 'void(unsigned char,  Vehicle *)'}
+   40 |                         setVehicleProperties(choice, ptrVec);
+      |                         ^~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:150:1: error: expected declaration or statement at end of input
+  150 | }
+      | ^
+At top level:
+..\src\Vehicle.c:140:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  140 | void displayVehicleInformation(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  124 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:32:06 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:150:1: error: expected declaration or statement at end of input
+  150 | }
+      | ^
+At top level:
+..\src\Vehicle.c:140:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  140 | void displayVehicleInformation(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  124 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:34:21 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:151:1: error: expected declaration or statement at end of input
+  151 | }
+      | ^
+At top level:
+..\src\Vehicle.c:140:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  140 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  124 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:34:49 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:150:1: error: expected declaration or statement at end of input
+  150 | }
+      | ^
+At top level:
+..\src\Vehicle.c:136:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  136 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:37:42 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:156:1: error: expected declaration or statement at end of input
+  156 | }
+      | ^
+At top level:
+..\src\Vehicle.c:142:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  142 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:130:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  130 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:120:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  120 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:111:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  111 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:44:29 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:150:1: error: expected declaration or statement at end of input
+  150 | }
+      | ^
+At top level:
+..\src\Vehicle.c:136:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  136 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:45:11 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c:136:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  136 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\Vehicle.o: in function `vehicleEngine_ON':
+E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:42: undefined reference to `specialVehicleSpeed'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:44: undefined reference to `displayVehicleInformation'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\Vehicle.o: in function `setVehicleProperties':
+E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:75: undefined reference to `setRoomTemperature_AC'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:81: undefined reference to `setEngine_Temperature_Controller'
+collect2.exe: error: ld returned 1 exit status
+23:46:18 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c:136:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  136 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\Vehicle.o: in function `vehicleEngine_ON':
+E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:42: undefined reference to `specialVehicleSpeed'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:44: undefined reference to `displayVehicleInformation'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: src\Vehicle.o: in function `setVehicleProperties':
+E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:75: undefined reference to `setRoomTemperature_AC'
+C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: E:\MT_Embedded Diploma\C\C Project\Vehicle Control System\Debug/../src/Vehicle.c:81: undefined reference to `setEngine_Temperature_Controller'
+collect2.exe: error: ld returned 1 exit status
+23:47:30 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:150:1: error: expected declaration or statement at end of input
+  150 | }
+      | ^
+At top level:
+..\src\Vehicle.c:136:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  136 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:47:44 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:134:1: error: expected declaration or statement at end of input
+  134 | }
+      | ^
+At top level:
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:48:19 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:134:1: error: expected declaration or statement at end of input
+  134 | }
+      | ^
+At top level:
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:52:12 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:149:1: error: expected declaration or statement at end of input
+  149 | }
+      | ^
+At top level:
+..\src\Vehicle.c:135:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  135 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:54:03 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:149:1: error: expected declaration or statement at end of input
+  149 | }
+      | ^
+At top level:
+..\src\Vehicle.c:135:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  135 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:54:48 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:151:1: error: expected declaration or statement at end of input
+  151 | }
+      | ^
+At top level:
+..\src\Vehicle.c:135:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  135 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:56:30 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:150:1: error: expected declaration or statement at end of input
+  150 | }
+      | ^
+At top level:
+..\src\Vehicle.c:135:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  135 | void specialVehicleSpeed(Vehicle *ptrVec) {
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+23:56:52 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'setSpeed':
+..\src\Vehicle.c:135:1: error: expected declaration or statement at end of input
+  135 | void specialVehicleSpeed(Vehicle *ptrVec) {}
+      | ^~~~
+At top level:
+..\src\Vehicle.c:135:6: warning: 'specialVehicleSpeed' defined but not used [-Wunused-function]
+  135 | void specialVehicleSpeed(Vehicle *ptrVec) {}
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:124:6: warning: 'displayVehicleInformation' defined but not used [-Wunused-function]
+  124 | void displayVehicleInformation(Vehicle *ptrVec){
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:114:6: warning: 'setEngine_Temperature_Controller' defined but not used [-Wunused-function]
+  114 | void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+      |      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Vehicle.c:105:6: warning: 'setRoomTemperature_AC' defined but not used [-Wunused-function]
+  105 | void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+      |      ^~~~~~~~~~~~~~~~~~~~~
+00:02:19 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+00:02:56 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+11:23:33 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'startVehicleMenu':
+..\src\Vehicle.c:21:18: warning: format '%c' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   21 |         scanf(" %c", state);
+      |                 ~^   ~~~~~
+      |                  |   |
+      |                  |   int
+      |                  char *
+..\src\Vehicle.c:21:9: warning: 'state' is used uninitialized [-Wuninitialized]
+   21 |         scanf(" %c", state);
+      |         ^~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+11:24:32 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+..\src\Vehicle.c: In function 'startVehicleMenu':
+..\src\Vehicle.c:21:18: warning: format '%c' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   21 |         scanf(" %c", state);
+      |                 ~^   ~~~~~
+      |                  |   |
+      |                  |   int
+      |                  char *
+..\src\Vehicle.c:21:9: warning: 'state' is used uninitialized [-Wuninitialized]
+   21 |         scanf(" %c", state);
+      |         ^~~~~~~~~~~~~~~~~~~
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+11:25:47 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+11:27:37 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:15:17: warning: unused variable 'v1' [-Wunused-variable]
+   15 |         Vehicle v1;
+      |                 ^~
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+11:32:12 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+Info: Nothing to build for Vehicle Control System
+11:41:39 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+11:43:02 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+11:44:22 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+Info: Nothing to build for Vehicle Control System
+13:38:37 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+Info: Nothing to build for Vehicle Control System
+15:18:28 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+16:03:07 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+Info: Nothing to build for Vehicle Control System
+Info: Nothing to build for Vehicle Control System
+Info: Nothing to build for Vehicle Control System
+16:13:33 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+16:18:05 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+16:24:58 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
+16:27:10 **** Incremental Build of configuration Debug for project Vehicle Control System ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
+gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 

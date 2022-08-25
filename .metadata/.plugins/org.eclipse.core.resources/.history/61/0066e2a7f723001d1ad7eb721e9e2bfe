@@ -1,0 +1,156 @@
+/*
+ ============================================================================
+ Name        : Vehicle.c
+ Author      : Mostafa Mahmoud Ali
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Source file for Vehicle Control System
+ ============================================================================
+ */
+
+#include "Vehicle.h"
+
+void stateMenu(uint8_t *state) {
+	printf("a. Turn on the vehicle engine\n");
+	printf("b. Turn off the vehicle engine\n");
+	printf("c. Quit the system\n\n");
+	fflush(stdout);
+	scanf(" %c", state);
+}
+
+void vehicleEngine_ON(Vehicle *ptrVec) {
+
+	ptrVec->engine = ON;
+	uint8_t choice;
+
+	while (ptrVec->engine == ON) {
+
+		printf("a. Turn off the engine \n");
+		printf("b. Set the traffic light color \n");
+		printf("c. Set the room temperature (Temperature Sensor) \n");
+		printf("d. Set the engine temperature (Engine Temperature Sensor) \n");
+
+		fflush(stdout);
+		scanf(" %c", &choice);
+
+		if ((choice == 'a') || (choice == 'A')) {
+
+		}
+		else
+			setVehicleProperties(choice, ptrVec);
+
+		specialVehicleSpeed(ptrVec);
+
+		displayVehicleInformation(ptrVec);
+	}
+
+}
+
+void vehicleEngine_OFF() {
+	printf("\nTurn OFF Vehicle Engine\n");
+	//stateMenu();
+
+}
+
+void quitSystem() {
+	printf("Quit The System\n");
+}
+
+void setVehicleProperties(uint8_t choice, Vehicle *ptrVec) {
+
+	uint8_t color;
+
+	if ((choice == 'b') || (choice == 'B')) {
+		printf("Enter the required traffic light color:\n"
+				"Red: Enter r \tOrange: Enter o \tGreen: Enter g\n"
+				"PS: Upper & Lower-case character is accepted\n");
+		fflush(stdout);
+		scanf(" %c", &color);
+		setSpeed(color, &ptrVec->speed);
+
+	} else if ((choice == 'c') || (choice == 'C')) {
+		printf("Enter the required room temperature:\n");
+		fflush(stdout);
+		scanf("%hhd", &ptrVec->roomTemp);
+		setRoomTemperature_AC(&ptrVec->roomTemp, &ptrVec->AC);
+
+	} else if ((choice == 'd') || (choice == 'D')) {
+		printf("Enter the required engine temperature:\n");
+		fflush(stdout);
+		scanf("%hd", &ptrVec->engineTemp);
+		setEngine_Temperature_Controller(&ptrVec->engineTemp, &ptrVec->engineTempController);
+
+	}
+}
+
+void setSpeed(uint8_t trafficLight, uint8_t *speed) {
+
+	switch (trafficLight) {
+	case 'g':
+	case 'G':
+		*speed = 100;
+		break;
+	case 'o':
+	case 'O':
+		*speed = 30;
+		break;
+	case 'r':
+	case 'R':
+		*speed = 0;
+		break;
+	default:
+		break;
+}
+
+void setRoomTemperature_AC(uint8_t *roomTemperture, State *acValue) {
+
+	if ((*roomTemperture < 10) || (*roomTemperture > 30)) {
+		*roomTemperture = 20;
+		*acValue = ON;
+	} else
+		*acValue = OFF;
+}
+
+void setEngine_Temperature_Controller(uint16_t *engineTemperature, State *tempController) {
+
+	if ((*engineTemperature < 100) || (*engineTemperature > 150)) {
+		*engineTemperature = 125;
+		*tempController = ON;
+	}
+	else
+		*tempController = OFF;
+}
+
+void displayVehicleInformation(Vehicle *ptrVec){
+
+	printf((ptrVec->engine == ON) ? "Engine state: ON\n" : "Engine state: OFF\n");
+	printf((ptrVec->AC == ON) ? "AC state: ON\n" : "AC state: OFF\n");
+	printf("Vehicle Speed: %d Km/Hr\n", ptrVec->speed);
+	printf("Room Temperature: %d C\n", ptrVec->roomTemp);
+	printf((ptrVec->engineTempController == ON) ?"Engine Temperature Controller State: ON\n" :
+					"Engine Temperature Controller State: OFF\n");
+	printf("Engine Temperature: %d C\n", ptrVec->engineTemp);
+}
+
+void specialVehicleSpeed(Vehicle *ptrVec) {
+
+		if (ptrVec->speed == 30) {
+
+			if (ptrVec->AC == OFF)
+				ptrVec->AC = ON;
+
+			if (ptrVec->engineTempController == OFF)
+				ptrVec->engineTempController = ON;
+
+			ptrVec->roomTemp = ptrVec->roomTemp * (5.0 / 4) + 1;
+
+			ptrVec->engineTemp = ptrVec->engineTemp * (5.0 / 4) + 1;
+		} else
+			return;
+}
+
+
+
+
+
+

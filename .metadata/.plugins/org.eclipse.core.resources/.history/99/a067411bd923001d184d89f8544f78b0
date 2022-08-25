@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : Vehicle.c
+ Author      : Mostafa Mahmoud Ali
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Source file for Vehicle Control System
+ ============================================================================
+ */
+
+#include "Vehicle.h"
+
+
+void stateMenu(uint8_t *state){
+	printf("a. Turn on the vehicle engine\n");
+	printf("b. Turn off the vehicle engine\n");
+	printf("c. Quit the system\n\n");
+	fflush(stdout);
+	scanf(" %c",state);
+}
+
+void vehicleEngine_ON(char state){
+
+
+
+}
+
+
+void vehicleEngine_OFF(){
+	printf("\nTurn OFF Vehicle Engine\n");
+	stateMenu();
+
+}
+
+
+void quitSystem(){
+	printf("Quit The System\n");
+}
+
+
+
+
