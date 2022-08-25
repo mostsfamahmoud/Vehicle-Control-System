@@ -15,7 +15,7 @@ int main(void) {
 	Vehicle v1;
 
 	vehicle_Init(&v1);
-
+	
 	printf("============= PS: Upper & Lower-case characters are accepted =============\n\n");
 
 	startVehicleMenu(&v1);
