@@ -176,5 +176,4 @@ void specialVehicleSpeed(Vehicle *ptrVec);
  */
 void displayVehicleInformation(Vehicle *ptrVec);
 
-
 #endif /* VEHICLE_H_ */
