@@ -305,5 +305,4 @@ void displayVehicleInformation(Vehicle *ptrVec){
 	printf("Engine Temperature: %d C\n", ptrVec->engineTemp);
 
 #endif
-
 }
