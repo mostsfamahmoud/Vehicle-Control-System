@@ -1,8 +1,0 @@
-16:27:10 **** Incremental Build of configuration Debug for project Vehicle Control System ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Vehicle.o" "..\\src\\Vehicle.c" 
-gcc -o "Vehicle Control System.exe" "src\\Vehicle.o" "src\\main.o" 
-
-16:27:10 Build Finished. 0 errors, 0 warnings. (took 689ms)
-
